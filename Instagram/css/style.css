@@ -9,11 +9,33 @@
     --black: black;
     /* white */
     --white: white;
+    /* blue  */
+    --blue: #1976D2;
+    /* lightgray */
+    --lightgray: #818181;
     /* light gray border color  */
     --border-color: #363636;
     /* hover background color  */
     --hover-color: rgba(255, 255, 255, .1);
+    /* font family  */
     --normal-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/* scroll bar  */
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* scroll bar Handle */
+body::-webkit-scrollbar-thumb {
+    background: rgb(36, 36, 36);
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 @font-face {
@@ -22,7 +44,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: var(--black);
     overflow-x: hidden;
     color: white;
 }
@@ -56,6 +78,11 @@ main {
     position: relative;
     align-items: start !important;
     justify-content: end !important;
+    overflow-x: hidden;
+}
+
+.top-bar{
+    display: none;
 }
 
 /* left side start */
@@ -68,12 +95,13 @@ main {
     left: 0px;
     border-right: 1px solid var(--border-color);
     z-index: 2;
-    background-color: black;
+    background-color: var(--black);
 }
 
 .left-side-1 {
-    min-width: 90%;
-    height: 100vh;
+    min-width: calc(100% - 40px);
+    min-height: calc(100vh - 40px);
+    padding: 20px;
     flex-direction: column !important;
     align-items: start !important;
     justify-content: space-around !important;
@@ -82,12 +110,21 @@ main {
 
 .left-side-1 .name {
     font-family: cookie;
-    font-size: 30pt;
+    font-size: 25pt;
+}
+
+.name a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+#insta-icon {
+    display: none;
 }
 
 .left-side-1 ul li {
     padding: 10px;
-    width: 200px;
+    width: 180px;
     border-radius: 10px;
     font-family: var(--normal-font-family);
 }
@@ -96,28 +133,31 @@ main {
     background-color: var(--hover-color);
 }
 
-ul li {
+.left-side-1 ul li {
     margin-top: 10px;
 }
 
-ul li a {
-    color: white;
+.left-side-1 ul li a {
+    color: var(--white);
     font-size: 13pt;
 }
 
-ul li a span {
-    font-size: 20px;
+.left-side-1 ul li a span {
     padding-right: 10px;
+}
+
+.left-side-1 ul li a .icon {
+    font-size: 20px;
 
 }
 
-/* in menu  */
+/* in menu reel wala icon as a image*/
 .reel-image img {
-    height: 18px;
-    width: 18px;
-    background-color: white;
+    height: 16px;
+    width: 16px;
+    background-color: var(--white);
     border-radius: 5px;
-    border: 2px solid white;
+    border: 2px solid var(--white);
 }
 
 .profile-image img {
@@ -134,10 +174,8 @@ ul li a span {
     width: calc(100vw - 250px);
     min-height: 100vh;
     align-items: start !important;
-    justify-content: center !important;
     padding: 25px 0px;
-    background-color: red;
-    gap: 80px;
+    gap: 50px;
 }
 
 /* center and right side parent div end */
@@ -146,28 +184,29 @@ ul li a span {
 
 .center {
     width: 50%;
-    /* min-width: 35%; */ /* instagram ki trhan hojayegi yeh wali width zppm out pr  */
+    max-width: 650px;
+    min-width: 650px;
+    /* min-width: 35%; */
+    /* instagram ki trhan hojayegi yeh wali width zoom out pr  */
     height: 2000px;
     min-height: 100vh;
     max-height: 2000px;
-    justify-content: end;
 }
 
 
 .center-1 {
-    width: auto;
-    /* width: 100%; */
+    width: 100%;
     height: 100%;
     justify-content: start !important;
     flex-direction: column;
     gap: 20px;
-    background-color: wheat;
 }
 
 .stories {
     gap: 10px;
     width: 100%;
-    min-width: 650;
+    /* min-width: 650px; */
+    justify-content: space-around !important;
 }
 
 .story-circle {
@@ -195,15 +234,14 @@ ul li a span {
 /* feed section start */
 .feeds {
     height: auto;
-    width: 500px;
-    background-color: wheat;
+    max-width: 450px;
+    min-width: 250px;
     align-items: start;
 }
 
 .inner-feed {
     height: auto;
     width: 100%;
-    background-color: aqua;
     flex-direction: column;
 }
 
@@ -218,7 +256,7 @@ ul li a span {
     height: 40px;
     width: 40px;
     object-fit: fill;
-    border: 1px solid white;
+    border: 1px solid var(--white);
     border-radius: 100%;
 
 }
@@ -251,8 +289,8 @@ ul li a span {
 .feed-bottom .image img {
     width: 100%;
     height: 100%;
-    opacity: 0.8;
     object-fit: cover;
+    object-position: center center;
 }
 
 .feed-bottom .icons {
@@ -288,7 +326,8 @@ ul li a span {
     background: transparent;
     outline: none;
     border: none;
-    color: rgb(167, 167, 167);
+    color: var(--lightgray);
+
 }
 
 .feed-bottom .like-comment-detial span,
@@ -305,19 +344,19 @@ ul li a span {
 
 .right-side {
     width: 30%;
-    height: 100vh;
-    gap: 10px;
+    max-width: 300px;
+    min-height: 100vh;
     align-items: start;
     justify-content: start;
     flex-direction: column;
-    background-color: white;
 
 }
 
 .right-side-1 {
-    height: 80px;
-    width: 70%;
-    background-color: red;
+    height: 60px;
+    width: 100%;
+    min-width: 300px;
+    max-width: 300px;
     align-items: center;
     justify-content: space-between;
 }
@@ -330,7 +369,6 @@ ul li a span {
     height: 40px;
     width: 40px;
     object-fit: fill;
-    border: 1px solid white;
     border-radius: 100%;
 }
 
@@ -345,7 +383,83 @@ ul li a span {
 
 .profile .user-and-name p:nth-child(2) {
     font-size: 9pt;
-    color: lightgray;
+    color: var(--lightgray);
+
 }
+
+.right-side-1 span button {
+    background: transparent;
+    border: none;
+    color: var(--blue);
+    font-family: var(--normal-font-family);
+    font-size: 9pt;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.right-side-1 span button:hover {
+    color: var(--white);
+}
+
+.suggest-and-button {
+    height: 40px;
+}
+
+.suggest-and-button span button {
+    color: var(--white);
+}
+
+.suggest-and-button span button:hover {
+    color: var(--lightgray);
+}
+
+.right-side-1 .suggest p {
+    font-family: var(--normal-font-family);
+    font-weight: 500;
+    font-size: 11pt;
+    color: var(--lightgray);
+}
+
+/* in right-side footer start  */
+
+.right-side-1 .footer {
+    width: 90%;
+    height: 150px;
+    flex-direction: column;
+    margin: auto 0px;
+    align-items: start !important;
+    gap: 20px;
+}
+
+.right-side-1 .footer ul {
+    justify-content: start !important;
+    flex-wrap: wrap;
+}
+
+.right-side-1 .footer ul li {
+    padding-right: 2.5px;
+}
+
+.right-side-1 .footer ul li::after {
+    content: ".";
+    color: var(--lightgray);
+    padding: 0px;
+    margin: 0px;
+}
+
+.right-side-1 .footer ul li:nth-child(10)::after,
+.right-side-1 .footer ul:nth-child(2) li::after {
+    content: "";
+}
+
+.right-side-1 .footer ul li a {
+    font-size: 9pt;
+    color: var(--lightgray);
+    text-transform: capitalize;
+    font-family: var(--normal-font-family);
+}
+
+/* in right-side footer end  */
 
 /* right-side div end */

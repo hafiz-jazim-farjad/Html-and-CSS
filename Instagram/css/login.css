@@ -27,6 +27,11 @@
     font-weight: normal;
 }
 
+.inner-form1 .name a {
+    text-decoration: none;
+    color: black;
+}
+
 body {
     min-height: 100Vh;
     min-width: 100Vw;
@@ -115,7 +120,7 @@ main {
 
 }
 
-.form-side form input[type="submit"] {
+.form-side form input[type="button"] {
     padding: 0px;
     width: 78%;
     border-radius: 10px;

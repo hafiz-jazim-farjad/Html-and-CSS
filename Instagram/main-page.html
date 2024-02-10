@@ -13,37 +13,101 @@
     <title> Instagram </title>
 </head>
 
-<body>
+<body oncontextmenu="return false">
     <main class="flex">
         <div class="main-container flex">
             <div class="left-side flex">
                 <div class="left-side-1 flex">
-                    <div class="name"> Instagram </div>
+                    <div class="name hide-in-mobile">
+                        <span class="icon fa-brands fa-instagram" id="insta-icon"></span>
+                        <a href="main-page.html">
+                            <span class="name hide-in-lap"> Instagram </span>
+                        </a>
+                    </div>
                     <div class="links">
                         <ul>
-                            <li><a href=""> <span class="fa fa-house"></span> Home </a></li>
-                            <li><a href=""> <span class="fa fa-search"></span> search </a></li>
-                            <li><a href=""> <span class="fa fa-compass"></span> Explore </a></li>
-                            <li><a href=""> <span class="reel-image"><img src="images/reel.png" alt=""></span> Reels</a>
+                            <li>
+                                <a href="">
+                                    <span class="icon fa fa-house"></span>
+                                    <span class="hide-in-lap"> Home </span>
+                                </a>
                             </li>
-                            <li><a href=""> <span class="fa-brands fa-facebook-messenger"></span> Message </a></li>
-                            <li><a href=""> <span class="fa-sharp fa-regular fa-heart"></span> Notification </a></li>
-                            <li><a href=""> <span class="fa-regular fa-square-plus"></span> Create </a></li>
-                            <li><a href=""> <span class="profile-image"><img src="images/profile.jpg" alt=""></span>
-                                    Profile </a></li>
+                            <li>
+                                <a href="">
+                                    <span class="icon fa fa-search"></span>
+                                    <span class="hide-in-lap"> search </span>
+                                </a>
+                            </li>
+                            <li class="hide-in-mobile">
+                                <a href="">
+                                    <span class="icon fa fa-compass"></span>
+                                    <span class="hide-in-lap"> Explore </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="reel-image">
+                                        <img src="images/reel.png" alt="">
+                                    </span>
+                                    <span class="hide-in-lap"> Reels </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon fa-brands fa-facebook-messenger"></span>
+                                    <span class="hide-in-lap"> Message </span>
+                                </a>
+                            </li>
+                            <li class="hide-in-mobile">
+                                <a href="">
+                                    <span class="icon fa-sharp fa-regular fa-heart"></span>
+                                    <span class="hide-in-lap"> Notification </span>
+                                </a>
+                            </li>
+                            <li class="hide-in-mobile">
+                                <a href="">
+                                    <span class="icon fa-regular fa-square-plus"></span>
+                                    <span class="hide-in-lap"> Create </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="profile-image"><img src="images/profile.jpg" alt=""></span>
+                                    <span class="hide-in-lap"> Profile </span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
-                    <div class="bottom-link">
+                    <div class="bottom-link hide-in-mobile">
                         <ul>
-                            <li><a href=""> <span class="fa-brands fa-threads"></span> Threads </a></li>
-                            <li><a href=""> <span class="fa-solid fa-bars"></span> More </a></li>
+                            <li class="hide-in-lap">
+                                <a href="">
+                                    <span class="icon fa-brands fa-threads"></span>
+                                    <span> Threads </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon fa-solid fa-bars"></span>
+                                    <span class="hide-in-lap"> More </span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
+
             <div class="center-and-right flex">
                 <div class="center flex">
                     <div class="center-1 flex">
+                        <!-- top bar in mobile -->
+                        <div class="top-bar flex">
+                            <div class="name"> <a href="main-page.html"> Instagram </a></div>
+                            <div class="icons flex">
+                                <span class="fa-regular fa-square-plus"></span>
+                                <span class="fa-regular fa-heart"></span>
+                            </div>
+                        </div>
                         <div class="stories flex">
                             <span class="story-circle flex">
                                 <img src="/images/profile.jpg" alt="">
@@ -132,21 +196,92 @@
                         <span class="profile flex">
                             <img src="images/profile.jpg" alt="">
                             <span class="user-and-name">
-                                <p>_user_1</p>
-                                <p>Orignal Audio</p>
+                                <p>_jazim_5 </p>
+                                <p>Jazim Farjad</p>
                             </span>
                         </span>
                         <span> <button>Switch</button> </span>
+                    </div>
+                    <div class="right-side-1 suggest-and-button flex">
+                        <span class="profile flex">
+                            <span class="suggest">
+                                <p> Suggested for you </p>
+                            </span>
+                        </span>
+                        <span>
+                            <button> See All </button>
+                        </span>
                     </div>
                     <div class="right-side-1 flex">
                         <span class="profile flex">
                             <img src="images/profile.jpg" alt="">
                             <span class="user-and-name">
                                 <p>_user_1</p>
-                                <p>Orignal Audio</p>
+                                <p> Suggested for you </p>
                             </span>
                         </span>
-                        <span> <button>Switch</button> </span>
+                        <span> <button>Follow</button> </span>
+                    </div>
+                    <div class="right-side-1 flex">
+                        <span class="profile flex">
+                            <img src="images/profile.jpg" alt="">
+                            <span class="user-and-name">
+                                <p>_user_2</p>
+                                <p> Suggested for you </p>
+                            </span>
+                        </span>
+                        <span> <button>Follow</button> </span>
+                    </div>
+                    <div class="right-side-1 flex">
+                        <span class="profile flex">
+                            <img src="images/profile.jpg" alt="">
+                            <span class="user-and-name">
+                                <p>_user_3</p>
+                                <p> Suggested for you </p>
+                            </span>
+                        </span>
+                        <span> <button>Follow</button> </span>
+                    </div>
+                    <div class="right-side-1 flex">
+                        <span class="profile flex">
+                            <img src="images/profile.jpg" alt="">
+                            <span class="user-and-name">
+                                <p>_user_4</p>
+                                <p> Suggested for you </p>
+                            </span>
+                        </span>
+                        <span> <button>Follow</button> </span>
+                    </div>
+                    <div class="right-side-1 flex">
+                        <span class="profile flex">
+                            <img src="images/profile.jpg" alt="">
+                            <span class="user-and-name">
+                                <p>_user_5</p>
+                                <p> Suggested for you </p>
+                            </span>
+                        </span>
+                        <span> <button>Follow</button> </span>
+                    </div>
+                    <div class="right-side-1 flex">
+                        <div class="footer flex">
+                            <ul class="flex">
+                                <li> <a href="#"> about </a> </li>
+                                <li> <a href="#"> help </a> </li>
+                                <li> <a href="#"> press </a> </li>
+                                <li> <a href="#"> api </a> </li>
+                                <li> <a href="#"> jobs </a> </li>
+                                <li> <a href="#"> privacy </a> </li>
+                                <li> <a href="#"> terms </a> </li>
+                                <li> <a href="#"> location </a> </li>
+                                <li> <a href="#"> language </a> </li>
+                                <li> <a href="#"> meta-verified </a> </li>
+                            </ul>
+                            <ul class="flex">
+                                <li>
+                                    <a href="#"> © 2024 INSTAGRAM FROM META </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

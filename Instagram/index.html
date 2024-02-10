@@ -21,16 +21,17 @@
                 <img src="images/on-home-phone1.png" alt="Phone Images">
             </div>
             <div class="form-side">
-                <form action="main-page.html" method="post">
+                <form method="post">
                     <div class="inner-form1">
-                        <h1 class="name"> Instagram </h1>
+                        <h1 class="name">
+                            <a href="index.html"> Instagram </a>
+                        </h1>
                         <br>
-                        <input type="text" name="username" id="username"
-                            placeholder="Phone Number, Username, or email ">
+                        <input type="text" name="username" id="username" placeholder="Phone Number, Username, or email">
 
                         <input type="password" name="passsword" id="password" placeholder="Password">
 
-                        <input type="submit" value="Log in">
+                        <input type="button" value="Log in" onclick="document.location.pathname='main-page.html';" />
 
                         <div class="line-main">
                             <div class="line"></div>
@@ -38,7 +39,8 @@
                             <div class="line"></div>
                         </div>
                         <span class="span-1">
-                            <h4><a href="#"> <span class="fa fa-facebook-square"></span> Log in with Facebook </a> </h4>
+                            <h4><a href="https://www.facebook.com" target="_blank"> <span
+                                        class="fa fa-facebook-square"></span> Log in with Facebook </a> </h4>
                         </span>
                         <span class="span-2">
                             <h4><a href="#"> Forgot Password? </a> </h4>
