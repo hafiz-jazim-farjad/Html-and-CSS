@@ -40,7 +40,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 @font-face {
     font-family: cookie;
-    src: url(/font/Cookie/Cookie-Regular.ttf);
+    src: url(../font/Cookie/Cookie-Regular.ttf);
 }
 
 body {
